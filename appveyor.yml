@@ -4,7 +4,7 @@ build:
 build_script:
   - mkdir cm
   - cd cm
-  - cmake .. -G"Visual Studio 14 2015 Win64"
+  - cmake .. -G"Visual Studio 14 2015 Win64" -DBUILD_BULLET2_DEMOS=ON -DBUILD_PYBULLET=ON
   - cmake --build . --target ALL_BUILD --config Release -- /maxcpucount:4 /verbosity:quiet
 
 test_script:
